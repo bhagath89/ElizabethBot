@@ -39,31 +39,31 @@ from Elizabeth.modules.helper_funcs.alternate import typing_action
 
 
 PM_START_TEXT = f"""
-`Hi..Welcome` [🦋](https://telegra.ph/file/debaabe44781f92783315.jpg)
-`I'm`  єlízαвєth
+`Hi..Welcome` [🦋](https://telegra.ph/file/1081021e66ef7df44c061.jpg)
+`I'm`Janaki
 `I'm here to help you manage your groups.. Click Help button to find out more about how to use me to my full potential..`
 """
 
-buttons = [[InlineKeyboardButton(text=" HELP AND COMMANDS ❓",
+buttons = [[InlineKeyboardButton(text=" HELP AND COMMANDS",
                                   callback_data="help_back"),
 ]]
 
-buttons += [[InlineKeyboardButton(text="♻️ ADD ME TO YOUR GROUP ♻️",
-                                  url="t.me/Elizabeth_TgBot?startgroup=true"),
+buttons += [[InlineKeyboardButton(text="ADD ME TO YOUR GROUP",
+                                  url="t.me/janaki_robot?startgroup=true"),
 ]]
 
-buttons += [[InlineKeyboardButton(text="SOURCE CODE 💫",
-                                  url="https://t.me/MR_SHRLOCK/49"),
-             InlineKeyboardButton(text="SUPPORT🌳",
-                                  url="https://t.me/joinchat/oxSPzt02LkgxOTY9"),
+buttons += [[InlineKeyboardButton(text="SOURCE CODE",
+                                  url="https://t.me/uvvauvve"),
+             InlineKeyboardButton(text="SUPPORT",
+                                  url="https://t.me/FlyingKILI"),
 ]]
 
-buttons += [[InlineKeyboardButton(text="🎀 CLOSE THE MENU 🎀",
+buttons += [[InlineKeyboardButton(text="CLOSE THE MENU",
                                   callback_data="close_menu")]]
 
 
 HELP_STRINGS = f"""
-`Hi.. I'm` єlízαвєth[🦋](https://telegra.ph/file/54ed9e0d6eef2cc730f12.jpg)
+`Hi.. I'm` Janaki[🦋](https://telegra.ph/file/1081021e66ef7df44c061.jpg)
 `Click on the buttons below to get documentation about specific modules..`"""
 
 
@@ -193,12 +193,12 @@ def send_start(update, context):
     chat = update.effective_chat  # type: Optional[Chat]
     first_name = update.effective_user.first_name
     text = PM_START_TEXT
-    buttons = [[InlineKeyboardButton(text="Help and Commands ❓",
+    buttons = [[InlineKeyboardButton(text="Help and Commands",
                                   callback_data="help_back"),
     ]]
              
 
-    buttons += [[InlineKeyboardButton(text="Close the Menu ☘",
+    buttons += [[InlineKeyboardButton(text="Close the Menu",
                                   callback_data="close_menu")]]
 
 
@@ -221,8 +221,8 @@ def start_stop(update, context):
 
     chat = update.effective_chat  # type: Optional[Chat]
     first_name = update.effective_user.first_name
-    text = "The menu is closed 🍁"
-    buttons = [[InlineKeyboardButton(text="Reopen Menu 🍁",
+    text = "The menu is closed"
+    buttons = [[InlineKeyboardButton(text="Reopen Menu",
                                      callback_data="bot_start")]]
 
     update.effective_message.reply_text(
@@ -284,7 +284,7 @@ def help_button(update, context):
                 text=text,
                 parse_mode=ParseMode.MARKDOWN,
                 reply_markup=InlineKeyboardMarkup([[
-                    InlineKeyboardButton(text="🔙 Back",
+                    InlineKeyboardButton(text="Back",
                                          callback_data="help_back")
                 ]]),
             )
@@ -346,7 +346,7 @@ def get_help(update, context):
                 [
                     [
                         InlineKeyboardButton(
-                            text="Help ❓",
+                            text="Help",
                             url="t.me/{}?start=help".format(context.bot.username),
                         )
                     ]
